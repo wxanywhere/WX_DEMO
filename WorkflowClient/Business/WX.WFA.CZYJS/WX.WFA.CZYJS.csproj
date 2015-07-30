@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74644B90-B1AC-4A8B-AFD1-92A335EC73C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WX.WFA.CZYJS</RootNamespace>
+    <AssemblyName>WX.WFA.CZYJS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Assemblies\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\VM_CZYJS.cs" />
+    <Compile Include="ViewModel\VM_CZYJS_CZYAdd.cs" />
+    <Compile Include="View\UC_CZYJS_CZYAdd.xaml.cs">
+      <DependentUpon>UC_CZYJS_CZYAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC_CZYJS.xaml.cs">
+      <DependentUpon>UC_CZYJS.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Base\WX.WFA.Common\WX.WFA.Common.csproj">
+      <Project>{F118E150-D568-4E05-87D9-4EF3B53D3154}</Project>
+      <Name>WX.WFA.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.Controls\WX.WFA.Controls.csproj">
+      <Project>{373697A3-6EC6-4B2F-A51D-5FBBBBD44C71}</Project>
+      <Name>WX.WFA.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.DataModelBase\WX.WFA.DataModelBase.csproj">
+      <Project>{2C424CBF-3999-4F4E-BACB-0F4270548798}</Project>
+      <Name>WX.WFA.DataModelBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.ISOAClient\WX.WFA.ISOAClient.csproj">
+      <Project>{B53516AE-80F8-4971-BE0A-F251C3266617}</Project>
+      <Name>WX.WFA.ISOAClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.Resource\WX.WFA.Resource.csproj">
+      <Project>{7F68338A-0493-4228-901E-420B8E0237A9}</Project>
+      <Name>WX.WFA.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.ViewCommon\WX.WFA.ViewCommon.csproj">
+      <Project>{C44739A0-AAA9-416E-90F7-B28B41C484D2}</Project>
+      <Name>WX.WFA.ViewCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Base\WX.WFA.ViewModel\WX.WFA.ViewModel.csproj">
+      <Project>{52DB5DDE-CF8B-4C4B-8197-E9000B10CC7F}</Project>
+      <Name>WX.WFA.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataModel\WX.WFA.VO\WX.WFA.VO.csproj">
+      <Project>{0F7A6EAA-FED6-43BC-BF9E-42AD7DB46439}</Project>
+      <Name>WX.WFA.VO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WX.WFA.ServiceChannel\WX.WFA.ServiceChannel.csproj">
+      <Project>{C076723D-0DB5-4F33-8408-65F51BF7948A}</Project>
+      <Name>WX.WFA.ServiceChannel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WX.WFA.ServiceContract\WX.WFA.ServiceContract.csproj">
+      <Project>{0996F613-32F1-4DFB-839A-64BBD1035AB1}</Project>
+      <Name>WX.WFA.ServiceContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Resources\VMT_CZYJS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UC_CZYJS_CZYAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UC_CZYJS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

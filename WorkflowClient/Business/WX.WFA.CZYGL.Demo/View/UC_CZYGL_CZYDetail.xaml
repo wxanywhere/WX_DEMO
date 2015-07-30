@@ -1,0 +1,40 @@
+﻿<XUserControl x:Class="WX.WFA.CZYGL.UC_CZYGL_CZYDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+    <XGrid Width="600" HorizontalAlignment="Left">
+        <XGrid.Resources>
+            <Style TargetType="RowDefinition">
+                <Setter Property="Height" Value="30"/>
+            </Style>
+            <Style TargetType="XTextBox" BasedOn="{StaticResource {x:Type XTextBox}}">
+                <Setter Property="IsReadOnly" Value="True"/>
+            </Style>
+        </XGrid.Resources>
+        <XGrid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </XGrid.RowDefinitions>
+        <XGrid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </XGrid.ColumnDefinitions>
+        <XLabel Grid.Row="0" Grid.Column="0" Content="操作员ID"/>
+        <XTextBox Grid.Row="0" Grid.Column="1" Text="{Binding CZYID}"/>
+        <XLabel Grid.Row="0" Grid.Column="3" Content="操作员姓名"/>
+        <XTextBox Grid.Row="0" Grid.Column="4" Text="{Binding XM}"/>
+        <XLabel Grid.Row="1" Grid.Column="0" Content="更新日期"/>
+        <XTextBox Grid.Row="1" Grid.Column="1" Text="{Binding GXRQ}"/>
+        <XLabel Grid.Row="1" Grid.Column="3" Content="创建日期"/>
+        <XTextBox Grid.Row="1" Grid.Column="4" Text="{Binding CJRQ}"/>
+        <XLabel Grid.Row="2" Grid.Column="0" Content="当前状态"/>
+        <XTextBox Grid.Row="2" Grid.Column="1" Text="{Binding DQZT}"/>
+    </XGrid>
+</XUserControl>

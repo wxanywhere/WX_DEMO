@@ -1,0 +1,1145 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ISOAC.CSharp</name>
+    </assembly>
+    <members>
+        <member name="T:YDTF.ISOA.AttributeHelper">
+            <summary>
+            AttributeHelper
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.AttributeHelper.GetMemberText(System.Enum)">
+            <summary>
+            GetMemberText
+            </summary>
+            <param name="enm"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YDTF.ISOA.MemberTextAttribute">
+            <summary>
+            MemberTextAttribute
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.MemberTextAttribute.#ctor(System.String)">
+            <summary>
+            MemberTextAttribute
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:YDTF.ISOA.MemberTextAttribute.Text">
+            <summary>
+            Text
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ExtraDataInfo">
+            <summary>
+            额外的服务调用初始化数据信息
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.UrlModel">
+            <summary>
+            UrlModel
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.UrlModel.IP">
+            <summary>
+            IP地址字符串
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.UrlModel.Port">
+            <summary>
+            端口号
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ConnectionType">
+            <summary>
+            连接类型
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ConnectionType.Long">
+            <summary>
+            长连接
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ConnectionType.Short">
+            <summary>
+            短连接
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOACBuiltInProvider">
+            <summary>
+            ISOACBuiltInProvider
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOACBuiltInProvider.TcpSinglePointDirectProvider">
+            <summary>
+            单点直连
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOACBuiltInProvider.TcpSinglePointProxyProvider">
+            <summary>
+            单点中介连接
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.DataHelper">
+            <summary>
+            DataHelper
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.ConvertXMLSpecialChar(System.String)">
+            <summary>
+            转换XML的特殊字符
+            
+            </summary>
+            <param name="strValue">需要转换的字符串</param>
+            <returns>
+            转换后的字符串
+            </returns>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.ConvertToXMLSpecialChar(System.String)">
+            <summary>
+            转换成XML的特殊字符
+            
+            </summary>
+            <param name="strValue">需要转换的字符串</param>
+            <returns>
+            转换后的字符串
+            </returns>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.GetBytesFromString(System.String,System.Text.Encoding)">
+            <summary>
+            字符串转字节流，使用指定编码
+            
+            </summary>
+            <param name="dataString"/>
+            <param name="encoding"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.GetBytesFromStringWithoutEncoding(System.String)">
+            <summary>
+            字符串转字节流
+            
+            </summary>
+            <param name="dataString"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.GetStringFromBytes(System.Byte[],System.Text.Encoding)">
+            <summary>
+            字节流转字符串-使用指定编码
+            
+            </summary>
+            <param name="dataBytes"/>
+            <param name="encoding"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.GetStringFromBytes(System.Byte[],System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+            字节流转字符串-使用指定编码
+            
+            </summary>
+            <param name="dataBytes"></param>
+            <param name="index"></param>
+            <param name="count"></param>
+            <param name="encoding"></param>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.Compress(System.Byte[])">
+            <summary>
+            压缩数据
+            
+            </summary>
+            <param name="source"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            拷贝数据流
+            </summary>
+            <param name="input"></param>
+            <param name="output"></param>
+        </member>
+        <member name="M:YDTF.ISOA.DataHelper.Decompress(System.Byte[],System.Int32)">
+            <summary>
+            解压数据
+            
+            </summary>
+            <param name="source"/>
+            <param name="length"/>
+            <returns/>
+        </member>
+        <member name="T:YDTF.ISOA.GlobalHelper">
+            <summary>
+            GlobalHelper
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.GlobalHelper.ISOACEncoding">
+            <summary>
+            ISOACEncoding
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.GlobalHelper._DataEncoding">
+            <summary>
+            数据编码
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.GlobalHelper._HeaderEncoding">
+            <summary>
+            头部编码
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.GlobalHelper._ErrorEncoding">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.GlobalHelper.DataEncoding">
+            <summary>
+            数据编码
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.GlobalHelper.HeaderEncoding">
+            <summary>
+            头部编码
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.GlobalHelper.ErrorEncoding">
+            <summary>
+            错误编码
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.FailedCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_REINIT">
+            <summary>
+            重复初始化，则失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_SOCK">
+            <summary>
+            创建 SOCKET失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_CONNECT">
+            <summary>
+            连接失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_NOCONN">
+            <summary>
+            没有创建连接
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_TIMEOUT">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_SEND">
+            <summary>
+            发送数据失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_UNSENT">
+            <summary>
+            未发送请求
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_RECV">
+            <summary>
+            接收数据失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_SETSOL">
+            <summary>
+            设置 SOL 选项失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_PACK">
+            <summary>
+            组织请求数据包失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_UNPACK">
+            <summary>
+            返回数据解包失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_ALLOC">
+            <summary>
+            动态申请内存资源失败
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_URL">
+            <summary>
+            Url格式不合法
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_HOST">
+            <summary>
+            ip地址格式不合法
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_PORT">
+            <summary>
+            端口不合法 
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_PARAM">
+            <summary>
+            传入的参数不合法
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_NOINIT">
+            <summary>
+            没有初始化过 
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_UNKNOW">
+            <summary>
+            未知错误
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.FailedCode.EC_PEER">
+            <summary>
+            ISOA服务返回错误信息
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.HeadFlag">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_FAILED">
+            <summary>
+            BPACK_FAILED
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_CATCH_ERR">
+            <summary>
+            BPACK_CATCH_ERR
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_ZIP">
+            <summary>
+            BPACK_ZIP
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_CRYPTO">
+            <summary>
+            BPACK_CRYPTO
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_MAC">
+            <summary>
+            BPACK_MAC
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_NEXTREQ">
+            <summary>
+            BPACK_NEXTREQ
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_NEXT">
+            <summary>
+            BPACK_NEXT
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_SPORT">
+            <summary>
+            BPACK_SPORT
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_DETECTOR">
+            <summary>
+            BPACK_DETECTOR
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_ASYNC">
+            <summary>
+            BPACK_ASYNC
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_SYNC">
+            <summary>
+            BPACK_SYNC
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_REACT">
+            <summary>
+            BPACK_REACT
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_BUSY">
+            <summary>
+            BPACK_BUSY
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadFlag.BPACK_MAXBIT">
+            <summary>
+            BPACK_MAXBIT
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOAExceptionLevel">
+            <summary>
+            ISOA服务异常级别
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOAExceptionLevel.INFO">
+            <summary>
+            INFO
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOAExceptionLevel.ALARM">
+            <summary>
+            ALARM
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOAExceptionLevel.ERROR">
+            <summary>
+            ERROR
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOAExceptionLevel.FATAL">
+            <summary>
+            FATAL
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.HandleProviderBase">
+            <summary>
+            句柄提供器基类
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.HandleProviderBase.RetrieveProvider``1">
+            <summary>
+            取得HandleProvide子类实例
+            </summary>
+            <typeparam name="T">具体的HandleProvide子类类型</typeparam>
+            <returns>具体的HandleProvide子类类型</returns>
+        </member>
+        <member name="T:YDTF.ISOA.HttpHandleProvider">
+            <summary>
+            HttpHandleProvider
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.IISOACProvider">
+            <summary>
+            IISOACProvider
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.IISOAC">
+            <summary>
+            ISOA客户端编程接口
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.IISOAC.Init(System.String,System.Int32,YDTF.ISOA.ExtraDataInfo)">
+            <summary>
+            初始化服务调用资源
+            </summary>
+            <param name="urls">ISOA Url字符串，多个Url以英文字符的逗号隔开，格式为：ISOA://ip:port,ISOA://domain:port</param>
+            <param name="flag">连接类型</param>
+            <param name="DataInfo">其他数据信息</param>
+            <returns>处理句柄提供器</returns>
+        </member>
+        <member name="M:YDTF.ISOA.IISOAC.Call(YDTF.ISOA.HandleProviderBase,System.String,System.Byte[])">
+            <summary>
+            调用ISOA服务
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="M:YDTF.ISOA.IISOAC.Destroy(YDTF.ISOA.HandleProviderBase)">
+            <summary>
+            销毁句柄提供器资源
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+        </member>
+        <member name="M:YDTF.ISOA.IISOAC.GetError(System.Int32)">
+            <summary>
+            获取错误信息
+            </summary>
+            <param name="failedCode">错误代码</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="P:YDTF.ISOA.IISOACProvider.HeadPack">
+            <summary>
+            头包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.IISOACProvider.RequestPack">
+            <summary>
+            请求包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.IISOACProvider.ConnectionTypeFlag">
+            <summary>
+            连接类型(?)
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.IISOACProvider.ExtraDataInfo">
+            <summary>
+            其他数据信息
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOAC">
+            <summary>
+            ISOA客户端调用接口
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOACBase">
+            <summary>
+            ISOA客户端基类
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.IsSingleTunnel(System.String)">
+            <summary>
+            判断Tunnel标志
+            </summary>
+            <param name="urls">标准的URL格式</param>
+            <returns>单通道标志</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.ValidateUrl(System.String)">
+            <summary>
+             验证URL序列
+            </summary>
+            <param name="urls">URL序列</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.ParseUrl(System.String)">
+            <summary>
+            解析URL序列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.ValidateServiceName(System.String)">
+            <summary>
+            验证服务名称，须满足三段式命名，每一段由大写字母和下划线组成，段与段之间用'.'分隔，第一段总长不超过10，第二段总长不超过20，第三段总长不超过98
+            </summary>
+            <param name="serviceName">服务名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutRequestContextToBuffer(System.String,System.Byte[],YDTF.ISOA.HeadPack,YDTF.ISOA.RequestPack)">
+            <summary>
+            请求上下文转成字节流
+            
+            </summary>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <param name="headPack">头包数据</param>
+            <param name="requestPack">请求包数据</param>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutRequestPackToBuffer(YDTF.ISOA.RequestPack)">
+            <summary>
+            RequestPack转成字节流
+            
+            </summary>
+            <param name="requestPack"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutHeadPackToBuffer(YDTF.ISOA.HeadPack)">
+            <summary>
+            HeadPack转成字节流
+            
+            </summary>
+            <param name="head"/>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.ReadToHeadPack(YDTF.ISOA.HeadPack@,System.Net.Sockets.NetworkStream)">
+            <summary>
+            读取并判断包头信息
+            
+            </summary>
+            <param name="head"/><param name="stream"/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.Read(System.Net.Sockets.NetworkStream,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            从networkStream读Length字节的数据;
+                        为防止网络状况问题和数据报大小缓冲限制;
+                        要读取多次,直至读出指定数目的字节.
+            
+            </summary>
+            <param name="stream">NetworkStrean对象</param>
+            <param name="data">字节数组缓冲</param>
+            <param name="offset">偏移,从offset字节处装入读入的数据</param>
+            <param name="Length">需要读出的字节总数</param>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutBufferToHeadPack(YDTF.ISOA.HeadPack@,System.Byte[])">
+            <summary>
+            字节流转成HeadPack;
+            
+            </summary>
+            <param name="head"/>
+            <param name="dataBuffer"/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.ReadToReactPack(YDTF.ISOA.HeadPack@,System.Net.Sockets.NetworkStream)">
+            <summary>
+            读取响应数据包信息
+            
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutBufferToReactPack(YDTF.ISOA.ReactPack@,System.Byte[])">
+            <summary>
+            字节流转成ReactPack;
+            
+            </summary>
+            <param name="reactPack"/>
+            <param name="dataBuffer"/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutStubRequestContextToBuffer(YDTF.ISOA.HeadPack,YDTF.ISOA.StubPack)">
+            <summary>
+            存根请求上下文转成buffer,直连时使用
+            </summary>
+            <param name="headPack">头包数据</param>
+            <param name="stubPack">存根数据</param>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutStubPackToBuffer(YDTF.ISOA.StubPack)">
+            <summary>
+            StubPack(存根信息)转成字节流,直连时使用
+            
+            </summary>
+            <param name="stubPack">存根数据</param>
+            <returns/>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACBase.PutBufferToStubPack(YDTF.ISOA.StubPack@,System.Byte[])">
+            <summary>
+            节流转成StubPack(存根信息),直连时使用
+            
+            </summary>
+            <param name="stubPack">存根数据</param>
+            <param name="dataBuffer">数据Buffer</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.#ctor(YDTF.ISOA.HeadPack)">
+            <summary>
+            使用自定义头包
+            </summary>
+            <param name="headPack"></param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.#ctor(YDTF.ISOA.RequestPack)">
+            <summary>
+            使用自定义请求包
+            </summary>
+            <param name="requestPack"></param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.#ctor(YDTF.ISOA.HeadPack,YDTF.ISOA.RequestPack)">
+            <summary>
+            使用自定义头包及请求包
+            </summary>
+            <param name="headPack">投包</param>
+            <param name="requestPack">请求包</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.ValidateBasicParams(System.String,System.String,System.Byte[])">
+            <summary>
+            验证基本参数
+            </summary>
+            <param name="urls"></param>
+            <param name="serviceName"></param>
+            <param name="requestData"></param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.Call(System.String,System.String,System.Byte[])">
+            <summary>
+            默认使用TCP协议，单点代理方式访问ISOA服务
+            </summary>
+            <param name="urls">ISOA Url,格式：ISOA://ip:port,ISOA://doman:port</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.Call(System.String,System.String,System.Byte[],YDTF.ISOA.ISOACBuiltInProvider)">
+            <summary>
+            使用内置Provider调用服务，由枚举条件选用具体的Provider
+            </summary>
+            <param name="urls">ISOA Url,格式：ISOA://ip:port,ISOA://doman:port</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <param name="builtInProvider">内置的ISOA访问提供器</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAC.Call(System.String,System.String,System.Byte[],YDTF.ISOA.IISOACProvider)">
+            <summary>
+            使用内置或自定义的Provider调用服务，直接使用Provider实例参数
+            </summary>
+            <param name="urls">ISOA Url,格式：ISOA://ip:port,ISOA://doman:port</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <param name="provider">现有或用户定制的Provider</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="T:YDTF.ISOA.ISOACTcpSinglePointDirectProvider">
+            <summary>
+            TCP协议下单点直连调用服务
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.Init(System.String,System.Int32,YDTF.ISOA.ExtraDataInfo)">
+            <summary>
+            初始化服务调用资源
+            </summary>
+            <param name="urls">ISOA Url字符串，多个Url以英文字符的逗号隔开，格式为：ISOA://ip:port,ISOA://domain:port</param>
+            <param name="flag">连接类型</param>
+            <param name="dataInfo">其他数据信息</param>
+            <returns>处理句柄提供器</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.Call(YDTF.ISOA.HandleProviderBase,System.String,System.Byte[])">
+            <summary>
+            调用ISOA服务,直连(三个步骤)
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.Destroy(YDTF.ISOA.HandleProviderBase)">
+            <summary>
+            销毁句柄提供器资源
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.GetError(System.Int32)">
+            <summary>
+            获取错误信息
+            </summary>
+            <param name="failedCode">错误代码</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.HeadPack">
+            <summary>
+            头包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.RequestPack">
+            <summary>
+            请求包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.ConnectionTypeFlag">
+            <summary>
+            连接类型
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointDirectProvider.ExtraDataInfo">
+            <summary>
+            其他数据信息
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOAException">
+            <summary>
+            服务返回异常基类
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOAException._exceptionCode">
+            <summary>
+            异常代码
+            
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor">
+            <summary>
+            构造函数
+            
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String,System.Int32)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="errorCode">异常代码</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String,YDTF.ISOA.ISOAExceptionLevel)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="exceptionLevel">异常级别</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String,System.Int32,YDTF.ISOA.ISOAExceptionLevel)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="exceptionCode">异常代码</param>
+            <param name="exceptionLevel">异常级别</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String,YDTF.ISOA.ISOAExceptionLevel,System.Exception)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="exceptionLevel">异常级别</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.#ctor(System.String,System.Int32,YDTF.ISOA.ISOAExceptionLevel,System.Exception)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="exceptionCode">异常代码</param>
+            <param name="exceptionLevel">异常级别</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOAException.ToString">
+            <summary/>
+            
+            <returns/>
+        </member>
+        <member name="P:YDTF.ISOA.ISOAException.ExceptionCode">
+            <summary>
+            异常代码，对应SYS_ERROR.SQLCODE,默认为-1
+            
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOAException.ExceptionLevel">
+            <summary>
+            异常级别，默认值为INFO
+            
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOANotFoundException">
+            <summary>
+            服务查询没有结果集异常
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ISOANotFoundException.NotFoundSqlCode">
+            <summary>
+            没找到的编号
+            
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOANotFoundException.#ctor">
+            <summary>
+            构造函数
+            
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOANotFoundException.#ctor(System.String)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOANotFoundException.#ctor(System.String,YDTF.ISOA.ISOAExceptionLevel)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param><param name="exceptionLevel">异常级别</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOANotFoundException.#ctor(System.String,YDTF.ISOA.ISOAExceptionLevel,System.Exception)">
+            <summary>
+            构造函数
+            
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="exceptionLevel">异常级别</param>
+            <param name="innerException">内部异常</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACAdapter.#ctor(YDTF.ISOA.IISOACProvider)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACAdapter.Call(System.String,System.String,System.Byte[])">
+            <summary>
+            调用自定义实现
+            </summary>
+            <param name="urls"></param>
+            <param name="serviceName"></param>
+            <param name="requestData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:YDTF.ISOA.ISOACTcpMultiPointProxyProvider">
+            <summary>
+            ISOACTcpMultiPointProxyProvider
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.Init(System.String,System.Int32,YDTF.ISOA.ExtraDataInfo)">
+            <summary>
+            Init
+            </summary>
+            <param name="urls"></param>
+            <param name="flag"></param>
+            <param name="dataInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.Call(YDTF.ISOA.HandleProviderBase,System.String,System.Byte[])">
+            <summary>
+            Call
+            </summary>
+            <param name="handleProvider"></param>
+            <param name="serviceName"></param>
+            <param name="requestData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.Destroy(YDTF.ISOA.HandleProviderBase)">
+            <summary>
+            Destroy
+            </summary>
+            <param name="handleProvider"></param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.GetError(System.Int32)">
+            <summary>
+            GetError
+            </summary>
+            <param name="failedCode"></param>
+            <returns></returns>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.HeadPack">
+            <summary>
+            HeadPack
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.RequestPack">
+            <summary>
+            RequestPack
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.ConnectionTypeFlag">
+            <summary>
+            ConnectionTypeFlag
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpMultiPointProxyProvider.ExtraDataInfo">
+            <summary>
+            ExtraDataInfo
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ISOACTcpSinglePointProxyProvider">
+            <summary>
+            TCP协议下通过服务代理调用服务
+            </summary>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.Init(System.String,System.Int32,YDTF.ISOA.ExtraDataInfo)">
+            <summary>
+            初始化服务调用资源
+            </summary>
+            <param name="urls">ISOA Url字符串，多个Url以英文字符的逗号隔开，格式为：ISOA://ip:port,ISOA://domain:port</param>
+            <param name="connectionTypeflag">连接类型</param>
+            <param name="dataInfo">附加数据</param>
+            <returns>处理句柄提供器</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.Call(YDTF.ISOA.HandleProviderBase,System.String,System.Byte[])">
+            <summary>
+            调用ISOA服务，使用服务端代理
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+            <param name="serviceName">服务名称</param>
+            <param name="requestData">请求数据</param>
+            <returns>响应数据</returns>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.Destroy(YDTF.ISOA.HandleProviderBase)">
+            <summary>
+            销毁句柄提供器资源
+            </summary>
+            <param name="handleProvider">句柄提供器</param>
+        </member>
+        <member name="M:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.GetError(System.Int32)">
+            <summary>
+            获取错误信息
+            </summary>
+            <param name="failedCode">错误代码</param>
+            <returns>错误信息</returns>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.HeadPack">
+            <summary>
+            头包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.RequestPack">
+            <summary>
+            请求包
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.ConnectionTypeFlag">
+            <summary>
+            连接类型
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.ISOACTcpSinglePointProxyProvider.ExtraDataInfo">
+            <summary>
+            其他数据信息
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.HeadPack">
+            <summary>
+            Define the ISOA_HEAD structure
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadPack.Flag">
+            <summary>
+            标志位:4字节
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadPack.Size">
+            <summary>
+            数据长度:4字节[数据加密或者压缩之后的实际长度]
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadPack.OSize">
+            <summary>
+            数据原始长度：4字节
+            
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.HeadPack.Mac">
+            <summary>
+            数据校检：130字节
+            
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.ReactPack">
+            <summary>
+            Define the rea_pack structure 
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ReactPack.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ReactPack.ServiceCost">
+            <summary>
+            服务耗时，以微妙记
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ReactPack.ReactSize">
+            <summary>
+            响应数据长度
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.ReactPack.ReactData">
+            <summary>
+            响应数据
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.RequestPack">
+            <summary>
+            Define the req_pack structure
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestPack.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestPack.ServiceName">
+            <summary>
+            服务名
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestPack.RequestSize">
+            <summary>
+            请求长度
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestPack.RequestData">
+            <summary>
+            请求数据
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.RequestReactPack">
+            <summary>
+            Define the req_rea_pack structure
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestReactPack.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestReactPack.TunnelName">
+            <summary>
+            必须完整复制StubPack.TunnelName
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.RequestReactPack.Remsgid">
+            <summary>
+            必须完整复制StubPack.Remsgid
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.StubPack">
+            <summary>
+            Define the stub_pack structure
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.ServiceName">
+            <summary>
+            服务名称  
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.Port">
+            <summary>
+            端口号 
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.TunnelName">
+            <summary>
+            服务通道名
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.Remsgid">
+            <summary>
+            消息类型 
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.AverageCost">
+            <summary>
+            平均耗时，以秒记
+            </summary>
+        </member>
+        <member name="F:YDTF.ISOA.StubPack.Iosec">
+            <summary>
+            服务最长等待时间
+            </summary>
+        </member>
+        <member name="T:YDTF.ISOA.TcpHandleProvider">
+            <summary>
+            TCP协议下句柄提供器
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.TcpHandleProvider.NetworkStream">
+            <summary>
+            NetworkStream
+            </summary>
+        </member>
+        <member name="P:YDTF.ISOA.TcpHandleProvider.TcpClient">
+            <summary>
+            TcpClient
+            </summary>
+        </member>
+    </members>
+</doc>

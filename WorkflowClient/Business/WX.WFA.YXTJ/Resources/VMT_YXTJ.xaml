@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vvm="clr-namespace:WX.WFA.YXTJ"
+                    >
+    <DataTemplate DataType="{x:Type vvm:VM_YXTJ}">
+        <vvm:UC_YXTJ/>
+    </DataTemplate>
+    
+</ResourceDictionary>

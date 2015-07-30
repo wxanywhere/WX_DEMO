@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+                    xmlns:vvm="clr-namespace:WX.WFA.CZYJS"
+                    >
+    <DataTemplate DataType="{x:Type vvm:VM_CZYJS}">
+        <vvm:UC_CZYJS />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_CZYJS_CZYAdd}">
+        <vvm:UC_CZYJS_CZYAdd />
+    </DataTemplate>
+</ResourceDictionary>
+

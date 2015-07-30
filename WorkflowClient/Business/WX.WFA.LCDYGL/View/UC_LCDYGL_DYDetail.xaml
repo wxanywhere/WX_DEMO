@@ -1,0 +1,61 @@
+﻿<XUserControl x:Class="WX.WFA.LCDYGL.UC_LCDYGL_DYDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+  <XGrid Margin="0,15,0,0">
+    <XGrid>
+      <XGrid.RowDefinitions>
+        <RowDefinition Height="*"/>
+      </XGrid.RowDefinitions>
+      <XGrid XGrid.Row="1">
+        <XGrid.Resources>
+          <Style TargetType="RowDefinition">
+            <Setter Property="Height" Value="30"/>
+          </Style>
+          <Style TargetType="XTextBox" BasedOn="{StaticResource {x:Type XTextBox}}">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+          </Style>
+        </XGrid.Resources>
+        <XGrid.RowDefinitions>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+          <RowDefinition/>
+        </XGrid.RowDefinitions>
+        <XGrid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="auto"/>
+          <ColumnDefinition Width="auto"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="Auto"/>
+        </XGrid.ColumnDefinitions>
+        <XLabel XGrid.Row="0" XGrid.Column="0" Content="定义编号:"/>
+        <XLabel XGrid.Row="0" XGrid.Column="2" Content="定义名称:"/>
+        <XLabel XGrid.Row="0" XGrid.Column="4" Content="定义版本:"/>
+        <XLabel XGrid.Row="1" XGrid.Column="0" Content="定义状态:"/>
+        <XLabel XGrid.Row="1" XGrid.Column="2" Content="定义日期:"/>
+        <XLabel XGrid.Row="1" XGrid.Column="4" Content="启用日期:"/>
+        <XLabel XGrid.Row="2" XGrid.Column="0" Content="内部操作员号:"/>
+        <XLabel XGrid.Row="2" XGrid.Column="2" Content="外部操作员号:"/>
+        <XLabel XGrid.Row="2" XGrid.Column="4" Content="配置编号:"/>
+        <XLabel XGrid.Row="3" XGrid.Column="0" Content="定义描述:"/>
+        <XTextBox  XGrid.Row="0" XGrid.Column="1" Text="{Binding DYID}"/>
+        <XTextBox  XGrid.Row="0" XGrid.Column="3" Text="{Binding DYMC}"/>
+        <XTextBox  XGrid.Row="0" XGrid.Column="5" Text="{Binding DYBB}"/>
+        <XTextBox  XGrid.Row="1" XGrid.Column="1" Text="{Binding DYZTX}"/>
+        <XTextBox  XGrid.Row="1" XGrid.Column="3" Text="{Binding DYRQX, StringFormat=yyy-MM-dd HH:mm:ss}"/>
+        <XTextBox  XGrid.Row="1" XGrid.Column="5" Text="{Binding QYRQX, StringFormat=yyy-MM-dd HH:mm:ss}"/>
+        <XTextBox  XGrid.Row="2" XGrid.Column="1" Text="{Binding NBCZYH}"/>
+        <XTextBox  XGrid.Row="2" XGrid.Column="3" Text="{Binding WBCZYH}"/>
+        <XTextBox  XGrid.Row="2" XGrid.Column="5" Text="{Binding PZID}"/>
+        <XTextBox  XGrid.Row="3" XGrid.Column="1" Grid.ColumnSpan="5" Width="Auto" HorizontalAlignment="Stretch" Text="{Binding DYSM}" Margin="0,0,0,10" Grid.RowSpan="2"/>
+      </XGrid>
+    </XGrid>
+  </XGrid>
+</XUserControl>

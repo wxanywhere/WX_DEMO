@@ -1,0 +1,113 @@
+﻿<XUserControl x:Class="WX.WFA.SLGL.UC_SLGL_DYDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              x:Name="root"
+            >
+    <XGrid>
+        <XGrid>
+            <XGrid.Resources>
+                <Style TargetType="RowDefinition">
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+                <Style TargetType="XLabel">
+                    <Setter Property="Width" Value="80"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                </Style>
+                <Style TargetType="XTextBox" BasedOn="{StaticResource {x:Type XTextBox}}">
+                    <Setter Property="Width" Value="200"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="IsReadOnly" Value="True"/>
+                </Style>
+            </XGrid.Resources>
+            <XGrid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </XGrid.RowDefinitions>
+            <XGrid XGrid.Row="0">                
+                <GroupBox Header="流程">
+                    <XGrid>
+                        <XGrid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </XGrid.ColumnDefinitions>
+                        <XLabel Content="定义编号：" XGrid.Column="0" />
+                        <XLabel Content="定义版本：" XGrid.Column="2" />
+                        <XLabel Content="定义名称：" XGrid.Column="4" />
+                        <XTextBox XGrid.Column="1" Text="{Binding DYID,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Column="3" Text="{Binding DYBB,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Column="5" Text="{Binding DYMC,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                    </XGrid>
+                </GroupBox>                
+            </XGrid>
+            <XGrid XGrid.Row="1">
+                <GroupBox Header="环节">
+                    <XGrid XGrid.Row="1">
+                        <XGrid.RowDefinitions>
+                            <RowDefinition/>                            
+                        </XGrid.RowDefinitions>
+                        <XGrid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </XGrid.ColumnDefinitions>
+                        <XLabel Content="环节编号：" XGrid.Column="0"/>
+                        <XLabel Content="环节名称：" XGrid.Column="2"/>
+                        <XLabel Content="业务流水号：" XGrid.Column="4"/>
+                        <XTextBox XGrid.Row="0" XGrid.Column="1" Text="{Binding HDID,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"/>
+                        <XTextBox XGrid.Row="0" XGrid.Column="3" Text="{Binding HDMC,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"/>
+                        <XTextBox XGrid.Row="0" XGrid.Column="5" Text="{Binding HD_YWLSH,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}"/>
+ 
+                    </XGrid>
+                </GroupBox> 
+            </XGrid>
+            <XGrid XGrid.Row="2">               
+                <GroupBox Header="实例" >
+                    <XGrid>
+                        <XGrid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </XGrid.RowDefinitions>
+                        <XGrid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </XGrid.ColumnDefinitions>
+                        <XLabel Content="实例编号：" XGrid.Column="0" XGrid.Row="0"/>
+                        <XLabel Content="实例状态：" XGrid.Column="2" XGrid.Row="0"/>
+                        <XLabel Content="实例子编号：" XGrid.Column="4" XGrid.Row="0"/>
+                        <XLabel Content="起始日期：" XGrid.Column="0" XGrid.Row="1"/>                       
+                        <XLabel Content="进入日期：" XGrid.Column="2" XGrid.Row="1"/>
+                        <XLabel Content="终止日期：" XGrid.Column="4" XGrid.Row="1"/>
+                        <XLabel Content="根流程编号：" XGrid.Column="0" XGrid.Row="2"/>
+                        <XLabel Content="父流程编号：" XGrid.Column="2" XGrid.Row="2"/>
+                        <XLabel Content="子流程编号：" XGrid.Column="4" XGrid.Row="2"/>
+                        <XTextBox XGrid.Row="0" XGrid.Column="1" Text="{Binding SLGUID,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="0" XGrid.Column="3" Text="{Binding SLZTX,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>                        
+                        <XTextBox XGrid.Row="0" XGrid.Column="5" Text="{Binding SLZID,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="1" XGrid.Column="1" Text="{Binding QDRQX, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="1" XGrid.Column="3" Text="{Binding JRRQX, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="1" XGrid.Column="5" Text="{Binding JZRQX, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="2" XGrid.Column="1" Text="{Binding GLC_GUID, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="2" XGrid.Column="3" Text="{Binding FLC_GUID, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                        <XTextBox XGrid.Row="2" XGrid.Column="5" Text="{Binding ZLC_GUID, StringFormat=yyy-MM-dd HH:mm:ss,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="25"/>
+                    </XGrid>
+                </GroupBox>                
+            </XGrid>
+        </XGrid>
+    </XGrid>
+</XUserControl>

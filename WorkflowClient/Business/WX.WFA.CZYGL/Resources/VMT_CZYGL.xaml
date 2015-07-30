@@ -1,0 +1,15 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+                    xmlns:vvm="clr-namespace:WX.WFA.CZYGL"
+                    >
+    <DataTemplate DataType="{x:Type vvm:VM_CZYGL}">
+        <vvm:UC_CZYGL />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_CZYGL_CZYAdd}">
+        <vvm:UC_CZYGL_CZYAdd />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_CZYGL_CZYModify}">
+        <vvm:UC_CZYGL_CZYModify />
+    </DataTemplate>
+</ResourceDictionary>
+

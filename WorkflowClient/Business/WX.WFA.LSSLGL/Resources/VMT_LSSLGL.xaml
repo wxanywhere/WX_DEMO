@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+                    xmlns:vvm="clr-namespace:WX.WFA.LSSLGL"
+                    >
+    <DataTemplate DataType="{x:Type vvm:VM_LSSLGL}">
+        <vvm:UC_LSSLGL/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_LSSLGL_SLLSXX}">
+        <vvm:UC_LSSLGL_SLLSXX/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_LSSLGL_LZSXW}">
+        <vvm:UC_LSSLGL_LZSXW/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_LSSLGL_SLDetail}">
+        <vvm:UC_LSSLGL_SLDetail/>
+    </DataTemplate>
+</ResourceDictionary>

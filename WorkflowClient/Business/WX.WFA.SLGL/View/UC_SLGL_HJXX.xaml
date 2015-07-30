@@ -1,0 +1,148 @@
+﻿<XUserControl x:Class="WX.WFA.SLGL.UC_SLGL_HJXX"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:WX.WFA.SLGL"
+             mc:Ignorable="d" 
+             Height="400" Width="600">
+    <XGrid>
+        <XGrid.RowDefinitions>
+            <RowDefinition Height="152"/>
+            <RowDefinition/>
+            <RowDefinition Height="92"/>
+        </XGrid.RowDefinitions>
+        <XGrid.ColumnDefinitions>
+            <ColumnDefinition Width="600"/>
+        </XGrid.ColumnDefinitions>
+        <GroupBox Header="基本信息" Margin="10,5,15,8">
+            <XGrid>
+                <XGrid.ColumnDefinitions>
+                    <ColumnDefinition Width="603"/>
+                </XGrid.ColumnDefinitions>
+                <XGrid.RowDefinitions>
+                    <RowDefinition Height="2"/>
+                    <RowDefinition Height="0.327*"/>
+                    <RowDefinition Height="1.98"/>
+                    <RowDefinition Height="0.349*"/>
+                    <RowDefinition Height="30.869"/>
+                    <RowDefinition Height="0.324*"/>
+                    <RowDefinition Height="1"/>
+                </XGrid.RowDefinitions>
+                <XGrid XGrid.Row="1" Margin="0,0,27,0">
+                    <XGrid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="65"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="0.33*"/>
+                        <ColumnDefinition Width="65"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="0.33*"/>
+                        <ColumnDefinition Width="65"/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition Width="0.34*"/>
+                        <ColumnDefinition Width="5"/>
+                    </XGrid.ColumnDefinitions>
+                    <XLabel Content="流程编号:" XGrid.Row="0" XGrid.Column="1" Margin="0"/>
+                    <XLabel Content="MP01-01" XGrid.Row="0" XGrid.Column="3" Margin="0" IsEnabled="False"/>
+                    <XLabel Content="流程名称：" XGrid.Row="0" XGrid.Column="4" Margin="0"/>
+                    <XLabel Content="费用审批流程" XGrid.Row="0" XGrid.Column="6" Margin="0" IsEnabled="False"/>
+                    <XLabel Content="环节ID：" XGrid.Row="0" XGrid.Column="7" Margin="0"/>
+                    <XLabel Content="1" XGrid.Row="0" XGrid.Column="9" Margin="0,0,5,0" IsEnabled="False"/>
+                </XGrid>
+                <XGrid XGrid.Row="3">
+                    <XGrid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="3"/>
+                    </XGrid.ColumnDefinitions>
+                    <XLabel Content="环节名称:" XGrid.Row="0" XGrid.Column="1" Margin="0"/>
+                </XGrid>
+                <XGrid XGrid.Row="5" Margin="0,0,40,0">
+                    <XGrid.ColumnDefinitions>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="Auto" MinWidth="70"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="58*"/>
+                        <ColumnDefinition Width="5"/>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="59*"/>
+                    </XGrid.ColumnDefinitions>
+                    <XLabel Content="环节类型:" XGrid.Row="0" XGrid.Column="1" Margin="0"/>
+                    <ComboBox XGrid.Column="3" Margin="0" VerticalAlignment="Stretch">
+                        <ComboBoxItem Content="开始|人工环节|条件" IsSelected="True"/>
+                    </ComboBox>
+                </XGrid>
+                <XTextBox Margin="83,2,0,2" XGrid.Row="3" TextWrapping="Wrap" Text="XTextBox" Height="24" HorizontalAlignment="Left" Width="193"/>
+                <XLabel Content="计划工期：" Margin="0,2.02,232.98,2.515" XGrid.Row="3" HorizontalAlignment="Right" Width="65.02"/>
+                <XTextBox Margin="0,5,40,30" XGrid.Row="3" Text="XTextBox" Width="185" Height="24" HorizontalAlignment="Right" XGrid.RowSpan="2"/>
+                <XTextBox Margin="81,4,40,0" XGrid.Row="4" Text="XTextBox" VerticalAlignment="Top" Height="24"/>
+                <XLabel Content="描述信息：" HorizontalAlignment="Left" Margin="8,2.944,0,2.868" XGrid.Row="4" d:LayoutOverrides="Height"/>
+            </XGrid>
+        </GroupBox>
+        <GroupBox Header="流转信息" Margin="10,0,15,0" XGrid.Row="1">
+            <XGrid>
+                <XGrid.ColumnDefinitions>
+                    <ColumnDefinition Width="282"/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition/>
+                </XGrid.ColumnDefinitions>
+                <XGrid Margin="5,0,0,0">
+                    <XGrid.ColumnDefinitions>
+                        <ColumnDefinition Width="277"/>
+                    </XGrid.ColumnDefinitions>
+                    <XGrid.RowDefinitions>
+                        <RowDefinition Height="134"/>
+                    </XGrid.RowDefinitions>
+                    <XLabel Content="前驱环节:" XGrid.Column="0" Margin="0,2,215,85"/>
+                    <XLabel Content="流入条件:" XGrid.Column="0" Margin="0,78,215,29"/>
+                    <XDataGrid XGrid.Column="0" Margin="0,27,0,56" x:Name="TransferIn" AutoGenerateColumns="False" Background="White">
+                        <XDataGrid.Columns>
+                            <DataGridTextColumn Header="编号" Width="40" Binding="{Binding BH}"/>
+                            <DataGridTextColumn Header="环节" Width="150" Binding="{Binding HJ}"/>
+                            <DataGridTextColumn Header="类型" Binding="{Binding LX}"/>
+                        </XDataGrid.Columns>
+                    </XDataGrid>
+                </XGrid>
+                <XGrid XGrid.Column="2">
+                    <XGrid.ColumnDefinitions>
+                        <ColumnDefinition Width="271"/>
+                    </XGrid.ColumnDefinitions>
+                    <XGrid.RowDefinitions>
+                        <RowDefinition Height="113"/>
+                    </XGrid.RowDefinitions>
+                    <XLabel Content="后续环节:" XGrid.Column="0" Margin="0,2,209,87"/>
+                    <XLabel Content="流出条件:" XGrid.Column="0" Margin="0,81,209,8"/>
+                    <XDataGrid XGrid.Column="0" Margin="0,27,-4,33" x:Name="TransferOut" AutoGenerateColumns="False" Background="White">
+                        <XDataGrid.Columns>
+                            <DataGridTextColumn Header="编号" Width="40" Binding="{Binding BH}"/>
+                            <DataGridTextColumn Header="环节" Width="150" Binding="{Binding HJ}"/>
+                            <DataGridTextColumn Header="类型" Binding="{Binding LX}"/>
+                        </XDataGrid.Columns>
+                    </XDataGrid>
+                </XGrid>
+                <XTextBox Margin="8,0,3,-1" TextWrapping="Wrap" Text="//if：  switch:  并发汇集：" VerticalAlignment="Bottom" Height="28"/>
+                <XTextBox XGrid.Column="2" Margin="3,0,0,-1" TextWrapping="Wrap" Text="//if：  switch:  并发汇集：" VerticalAlignment="Bottom" Height="28"/>
+            </XGrid>
+        </GroupBox>
+        <GroupBox Header="参与者信息" Margin="10,3,10,0" XGrid.Row="2">
+            <XGrid Margin="0,0,-2,-12">
+                <XGrid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="558"/>
+                </XGrid.ColumnDefinitions>
+                <XGrid.RowDefinitions>
+                    <RowDefinition Height="59"/>
+                </XGrid.RowDefinitions>
+                <XDataGrid XGrid.ColumnSpan="2" x:Name="Persons" AutoGenerateColumns="False" Background="White"  Height="66" VerticalAlignment="Top" Margin="0,3,0,-9">
+                    <XDataGrid.Columns>
+                        <DataGridTextColumn Header="角色" Width="150" Binding="{Binding LX}"/>
+                        <DataGridTextColumn Header="角色描述" Width="200" Binding="{Binding MC}"/>
+                    </XDataGrid.Columns>
+                </XDataGrid>
+            </XGrid>
+        </GroupBox>
+    </XGrid>
+</XUserControl>

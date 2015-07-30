@@ -1,0 +1,65 @@
+﻿<XUserControl x:Class="WX.WFA.CZYGL.UC_CZYGL"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:WX.WFA.CZYGL"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="400"
+             x:Name="root"
+             Style="{StaticResource XUserControl}"
+             >
+  <XUserControl.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/WX.WFA.Resource;Component/Theme/Resources.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </XUserControl.Resources>
+  <XGrid>
+    <XGrid.RowDefinitions>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="30"/>
+      <RowDefinition Height="3*"/>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </XGrid.RowDefinitions>
+    <XGrid Grid.Row="0" HorizontalAlignment="Right" DataContext="{Binding D_QueryEntity}">
+      <XGrid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </XGrid.ColumnDefinitions>
+      <XLabel Grid.Column="0" Content="操作员ID"/>
+      <XTextBox Grid.Column="1" Width="200" Text="{Binding CZYID}" />
+      <XButton Grid.Column="2" Content="重置"  Command="{Binding DataContext.CMD_Reset,ElementName=root}" Width="60"/>
+      <XButton Grid.Column="3" Content="查询"  Command="{Binding DataContext.CMD_Query,ElementName=root}" Width="60"/>
+    </XGrid>
+    <XGrid Grid.Row="1" HorizontalAlignment="Left">
+      <XGrid.Resources>
+        <Style TargetType="ColumnDefinition">
+          <Setter Property="Width" Value="80"/>
+        </Style>
+      </XGrid.Resources>
+      <XGrid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </XGrid.ColumnDefinitions>
+      <XButton Grid.Column="0" Content="增加" Command="{Binding CMD_Add}" Width="60" />
+      <XButton Grid.Column="1" Content="修改" Command="{Binding CMD_Modify}" Width="60"/>
+      <XButton Grid.Column="2" Content="删除" Command="{Binding CMD_Delete}" Width="60"/>
+    </XGrid>
+    <XDataGrid Grid.Row="2" ItemsSource="{Binding D_CZYView}" SelectedItem="{Binding D_CZYSelectedItem}" >
+      <XDataGrid.Columns>
+        <DataGridTextColumn Header="操作员ID" Binding="{Binding CZYID}" Width="120"/>
+        <DataGridTextColumn Header="姓名" Binding="{Binding XM}" Width="120"/>
+        <DataGridTextColumn Header="创建日期" Binding="{Binding CJRQX, StringFormat=yyy-MM-dd HH:mm:ss}" Width="120"/>
+        <DataGridTextColumn Header="当前状态" Binding="{Binding DQZTX}" Width="60"/>
+      </XDataGrid.Columns>
+    </XDataGrid>
+    <XGridSplitter Grid.Row="3" Height="2" ResizeDirection="Rows" HorizontalAlignment="Stretch"/>
+    <uc:UC_CZYGL_CZYDetail Grid.Row="4" DataContext="{Binding D_CZYSelectedItem}"/>
+  </XGrid>
+</XUserControl>

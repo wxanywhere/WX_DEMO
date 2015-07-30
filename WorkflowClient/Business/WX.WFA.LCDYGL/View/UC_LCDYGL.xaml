@@ -1,0 +1,67 @@
+﻿<XUserControl x:Class="WX.WFA.LCDYGL.UC_LCDYGL"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:WX.WFA.LCDYGL"
+             mc:Ignorable="d"  
+              Style="{StaticResource XUserControl}"
+             x:Name="root"
+             >
+  <XGrid>
+    <XGrid XGrid.Column="1">
+      <XGrid.RowDefinitions>
+        <RowDefinition Height="36" />
+        <RowDefinition Height="*" />
+        <RowDefinition Height="4" />
+        <RowDefinition Height="auto" />
+      </XGrid.RowDefinitions>
+      <Border  XGrid.Row="0">
+        <XGrid DataContext="{Binding D_QueryEntity}">
+          <XGrid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0" />
+          </XGrid.RowDefinitions>
+          <StackPanel XGrid.Row="0" XGrid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right">
+            <XLabel Content="定义编号："/>
+            <XTextBox Text="{Binding DYID}" MinWidth="150"/>
+            <XLabel Content="定义名称："/>
+            <XTextBox Text="{Binding DYMC}" MinWidth="150"/>
+            <!--<XLabel Content="定义版本："/>
+            <XComboBox XGrid.Row="1" MinWidth="60" Text="{Binding DYBB}">
+              <ComboBoxItem Content="1" Width="100" IsSelected="True"/>
+              <ComboBoxItem Content="2" Width="100"/>
+            </XComboBox>-->
+            <XLabel Content="定义日期从："/>
+            <XDatePicker SelectedDate="{Binding DYRQ_START}" MinWidth="80"/>
+            <XLabel Content="至："/>
+            <XDatePicker SelectedDate="{Binding DYRQ_END}" MinWidth="80"/>
+            <XButton Width="60" Content="重置" Command="{Binding DataContext.CMD_Reset,ElementName=root}"/>
+            <XButton Width="60" Content="查询" Command="{Binding DataContext.CMD_Query,ElementName=root}"/>
+          </StackPanel>
+          <XStackPanel XGrid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Visibility="Collapsed">
+            <XButton Width="60" Height="28" Content="添加" Command="{Binding CMD_CJDY}"/>
+            <XButton Width="60" Height="28" Content="删除" />
+          </XStackPanel>
+        </XGrid>
+      </Border>
+      <XGrid XGrid.Row="1">
+        <XDataGrid  ItemsSource="{Binding D_DYView}" SelectedItem="{Binding D_DYSelectedItem}">
+          <XDataGrid.Columns>
+            <DataGridTextColumn Header="定义名称" Binding="{Binding DYMC}" Width="150"/>
+            <DataGridTextColumn Header="定义版本" Binding="{Binding DYBB}" Width="60"/>            
+            <DataGridTextColumn Header="定义状态" Binding="{Binding DYZTX}" Width="60"/>
+            <DataGridTextColumn Header="定义日期" Binding="{Binding DYRQX, StringFormat=yyy-MM-dd HH:mm:ss}" Width="100"/>
+            <DataGridTextColumn Header="启用日期" Binding="{Binding QYRQX, StringFormat=yyy-MM-dd HH:mm:ss}" Width="100"/>
+            <DataGridTextColumn Header="内部操作员号" Binding="{Binding NBCZYH}" Width="90"/>
+            <DataGridTextColumn Header="外部操作员号" Binding="{Binding WBCZYH}" Width="90"/>            
+            <DataGridTextColumn Header="配置编号" Binding="{Binding PZID}" Width="90"/>
+            <DataGridTextColumn Header="定义描述" Binding="{Binding DYSM}" Width="200"/>            
+        </XDataGrid.Columns>
+        </XDataGrid>
+      </XGrid>
+      <XGridSplitter Grid.Row="2" Height="2" ResizeDirection="Rows" HorizontalAlignment="Stretch"/>
+      <uc:UC_LCDYGL_DYDetail Grid.Row="3" DataContext="{Binding D_DYSelectedItem}" />
+    </XGrid>
+  </XGrid>
+</XUserControl>

@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="WX.WFA.LSSLGL.UC_LSSLGL_SLLSXX"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:WX.WFA.LSSLGL"
+             mc:Ignorable="d" 
+             x:Name="root"
+             MinHeight="400" MinWidth="600">
+    <XGrid>
+        <XGrid>
+            <XGrid.Resources>
+                <Style TargetType="RowDefinition">
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </XGrid.Resources>
+            <XGrid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </XGrid.RowDefinitions>
+            <uc:UC_LSSLGL_SLDetail XGrid.Row="0" DataContext="{Binding D_SLXXDetail}" Margin="10,0,10,0"/>
+            <XGrid XGrid.Row="1">
+                <XGrid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </XGrid.RowDefinitions>
+                <Label Content="▼实例运行记录：" XGrid.Row="0"/>
+                <XGrid XGrid.Row="1">
+                    <XDataGrid Margin="8,0,10,10" ItemsSource="{Binding D_SLLZView}" SelectedItem="{Binding D_LZSelectedItem}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDoubleClick">
+                                <i:InvokeCommandAction Command="{Binding DataContext.CMD_LZSXW, ElementName=root}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <XDataGrid.Columns>
+                            <DataGridTextColumn Header="√"/>
+                            <DataGridTextColumn Header="环节编号" Width="60" Binding="{Binding HDID}"/>
+                            <DataGridTextColumn Header="业务流水号" Width="80" Binding="{Binding YWLSH}"/>
+                            <DataGridTextColumn Header="转移编号" Width="60" Binding="{Binding ZYID}"/>
+                            <DataGridTextColumn Header="环节流入时间" Width="90" Binding="{Binding JRRQX, StringFormat=yyy-MM-dd HH:mm:ss}"/>
+                            <DataGridTextColumn Header="环节流出时间" Width="90" Binding="{Binding LCRQX, StringFormat=yyy-MM-dd HH:mm:ss}"/>
+                            <DataGridTextColumn Header="前向环节编号" Width="90" Binding="{Binding QXHDID}"/>
+                            <DataGridTextColumn Header="前向业务流水号" Width="100" Binding="{Binding QX_YWLSH}"/>
+                            <DataGridTextColumn Header="后向环节编号" Width="60" Binding="{Binding HXHDID}"/>
+                            <DataGridTextColumn Header="后向业务流水号" Width="100" Binding="{Binding HX_YWLSH}"/>
+                            <DataGridTextColumn Header="转移状态" Width="60" Binding="{Binding ZYZTX}"/>
+                        </XDataGrid.Columns>
+                    </XDataGrid>
+                </XGrid>
+            </XGrid>
+        </XGrid>
+    </XGrid>
+</UserControl>

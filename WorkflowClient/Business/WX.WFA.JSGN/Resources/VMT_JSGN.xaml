@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+                    xmlns:vvm="clr-namespace:WX.WFA.JSGN"
+                    >
+    <DataTemplate DataType="{x:Type vvm:VM_JSGN}">
+        <vvm:UC_JSGN />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vvm:VM_JSGN_Edit}">
+        <vvm:UC_JSGN_Edit />
+    </DataTemplate>
+</ResourceDictionary>
+

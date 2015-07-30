@@ -1,0 +1,63 @@
+﻿<XWindow x:Class="WX.WFA.MainFrame.W_Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="登录"  Icon="..\Resources\Image\wfl.ico" Height="250" Width="350" ResizeMode="CanMinimize">
+    <XWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WX.WFA.Resource;Component/Theme/Resources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </XWindow.Resources>
+    <XGrid>
+        <XGrid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="45"/>
+        </XGrid.RowDefinitions>
+        <Label Grid.Row="0" Content="工作流管理客户端" FontSize="18" Margin="0,15,0,0" HorizontalAlignment="Center" />
+        <XGrid Grid.Row="1">
+            <XGrid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </XGrid.ColumnDefinitions>
+            <XGrid Grid.Column="1">
+                <XGrid.Resources>
+                    <Style TargetType="RowDefinition">
+                        <Setter Property="Height" Value="36"/>
+                    </Style>
+                </XGrid.Resources>
+                <XGrid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition/>
+                </XGrid.RowDefinitions>
+                <XGrid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </XGrid.ColumnDefinitions>
+                <XLabel Grid.Row="0" Grid.Column="0" Content="操作员ID：" VerticalAlignment="Center"/>
+                <XTextBox Grid.Row="0" Grid.Column="1" DataContext="{Binding D_CZY}" Text="{Binding CZYID}" Width="150"/>
+                <XLabel Grid.Row="1" Grid.Column="0" Content="密码：" VerticalAlignment="Center"/>
+                <XContentControl Grid.Row="1" Grid.Column="1" Content="{Binding D_MM}"/>
+            </XGrid>
+        </XGrid>
+        <XSeparator Grid.Row="2" Height="1" />
+        <XGrid Grid.Row="3" HorizontalAlignment="Center">
+            <XGrid.Resources>
+                <Style TargetType="ColumnDefinition">
+                    <Setter Property="Width" Value="100"/>
+                </Style>
+                <Style TargetType="XButton" BasedOn="{StaticResource {x:Type XButton}}">
+                    <Setter Property="Width" Value="80"/>
+                </Style>
+            </XGrid.Resources>
+            <XGrid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </XGrid.ColumnDefinitions>
+            <XButton Grid.Column="0" Content="登录" Command="{Binding CMD_Login}"/>
+            <XButton Grid.Column="1" Content="退出" Command="{Binding CMD_Exit}"/>
+        </XGrid>
+    </XGrid>
+</XWindow>
